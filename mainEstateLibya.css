@@ -1,0 +1,677 @@
+
+body,html{
+    list-style-type: none;
+    margin: 0px;
+    margin-top: 0%;
+}
+
+header {
+    width: 100%;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------*/
+.topnav {
+    background-color: #222f3e;
+    overflow: hidden;
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: right;
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    padding: 18px  20px;
+    text-decoration: none;
+    font-size: 21px;
+   
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    background-color: #0eaaa6;
+    color: aliceblue;
+   
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+   /* padding: 0px;*/
+  
+   
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+    float: right;
+    overflow: hidden;
+    
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+    font-size:21px;
+    border: none;
+    outline: none;
+    color: aliceblue;
+    padding: 18px 20px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer; 
+}
+
+/* Style the dropdown content (hidden by default) */
+   .dropdown-content {
+       display: none;
+       position: absolute;
+       background: #f9f9f9;
+       min-width: 160px;
+       box-shadow: 0px 8px 16px 0px rgb(0,0,0,0.2);
+       z-index: 1;
+    
+   }
+
+   .mySlides {
+    vertical-align: middle;  
+}
+
+/* Slideshow container */
+.mySlides-container {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+}
+
+/* Add a dark background on topnav links and the dropdown button  on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #555;
+    color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover{
+    background-color: #ddd;
+    color: black;
+    
+}
+
+#afterloginn{
+    float: left;
+}
+
+.menu{
+    width: 100%;
+    height: 65px;
+}
+
+.menu>.menu-content{
+   float: left;
+   font-size: 21px;
+   font-weight: bold;
+ 
+}
+
+.login-form>form{
+    width: 250px;
+    margin: 25px auto;
+    font-size: 18px;
+}
+
+input[type="text"],
+input[type="password"]{
+    width: 220px;
+    height: 30px;
+    border: 0px;
+    outline: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+input[type="submit"]{
+    width: 95%;
+    height: 45px;
+    background: #0eaaa6;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    outline: none;
+    border: 0px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.linbutton{
+    width: 95%;
+    height: 45px;
+    background: #0eaaa6;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    outline: none;
+    border: 0px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 0;
+    margin-top: 5px;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+    display: block;
+  
+}
+
+
+
+
+/* when the screen is less than 600 pixels wide, hide all links, except for the first one
+("Home"). Show the link that contains should and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+    .topnav a.icon{
+        float: right;
+        display: block;
+    }
+}
+
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon.
+This class makes the topnav look good on small screens ( display the links vertically instead
+of horizontally) */
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive .dropdown{float: none;}
+    .topnav.responsive .dropdown-content{position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: right;
+    }
+}
+
+
+/* ---------------------------------------------*/
+
+
+/* Add styles to the form container */
+/*.container {
+    position: absolute;
+    right: 30px;
+    margin: 20px;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
+  } */
+
+  
+/* Add styles to the form container */
+.container {
+    position: absolute;
+    top: 90px;
+    right: 70px;
+    margin: 60px;
+    max-width: 314px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    bottom: 20px; 
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+    .form {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+   width: 100%;
+   padding: 20px;
+   margin: 12px 0 20px 0;
+   border: none;
+   background: #f1f1f1;
+   
+}
+
+input[type=text]:focus, input[type=password]:focus {
+   background-color: #ddd;
+   outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+    background-color: #0eaaa6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 18px;
+         
+}
+
+.btn:hover {
+   opacity: 1;
+}
+
+/* ------------------ nav bar -----------------------------  */
+
+.mynav{
+    background-color: #0eaaa6;
+    padding: 60px;
+    width: 100%;
+    font-size: 21%;
+}
+
+/*------------------End nav bar------------------------*/
+
+/*------------------ services --------------------------*/
+
+.services{
+    background-color: #BDC581;
+    padding: 5px;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+/* Float four columns side by side */
+.columnn {
+    float: right;
+    width: 30%;
+    padding: 12px 15px;
+    margin-right: 30px;
+    
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .roww {margin: 0px -10px;}
+  
+  /* Clear floats after the columns */
+  .roww:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the counter cards */
+  .cardd {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 90px;
+    text-align: center;
+    background-color: #0eaaa6;
+  }
+  
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .columnn {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+/*----------------- End services -----------------------*/
+
+/*------------------ section1--------------------------*/
+.section1{
+    background-color: beige;
+    padding: 10px;
+    width: 100%;
+    margin: 0;
+}
+
+.section1-Header{
+    text-align: center;
+    font-size:20px;
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    div.example {
+      font-size: 15px;
+    }
+  }
+
+/* Three columns side by side */
+.column {
+    float: right;
+    width: 33.3%;
+    margin-bottom: 10px;
+    padding: 0px 16px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  /* Add some shadows to create a card effect */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Some left and right padding inside the container */
+  .container {
+    padding: 0 14px;
+  }
+  
+  /* Clear floats */
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: #0eaaa6;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 15px;
+    color: white;
+    background-color: #292c2f;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .button:hover {
+    background-color: #0eaaa6;
+  }
+
+  conta,h2{
+      text-align: center;
+      color: #2C3A47;
+  }
+ 
+/*-------------------End section1-----------------------*/
+
+/*------------------- agents ---------------------------*/
+
+.section5 {
+    background-color: #BDC581;
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 21px;
+    width: 100%;
+ 
+}
+
+ /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+ .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    display: inline-block;
+    margin: 22px;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #0eaaa6;
+    color: white;
+    transform: rotateY(180deg);
+  } 
+
+  
+
+/*-------------------- End agents ----------------------*/
+
+/*--------------------footer--------------------*/
+.footer-distributed{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+
+	padding: 55px 50px;
+	margin-top: 0px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+    width: 20%;
+    
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+    margin: 0;
+    float: right;
+}
+
+.footer-distributed h3 span{
+    color:  #0eaaa6;
+    
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 15px 0 12px;
+    padding: 0;   
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+    color:  inherit; 
+    padding: 5px;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+    margin: 0; 
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+    line-height:2;
+    
+}
+
+.footer-distributed .footer-center p a{
+	color:  #0eaaa6;
+    text-decoration: none;
+    
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 40%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+    margin: 0;
+    
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+/***************End footer*********************/
